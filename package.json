@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,26 @@
   "bugs": {
     "url": "https://github.com/marius321967/semantic-release-sample/issues"
   },
-  "homepage": "https://github.com/marius321967/semantic-release-sample#readme"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
+  },
+  "homepage": "https://github.com/marius321967/semantic-release-sample#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "husky": "^8.0.2"
+  },
+  "dependencies": {}
 }
