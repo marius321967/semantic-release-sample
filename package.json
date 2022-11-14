@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo 'tests successful'",
     "prepare": "husky install",
     "release": "yarn semantic-release"
   },
@@ -40,14 +41,18 @@
     "semantic-release": "^19.0.5"
   },
   "release": {
+    "debug": true,
+    "branches": [ "master" ],
     "plugins": [
+      "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       [
         "@semantic-release/changelog",
         {
           "changelogFile": "CHANGELOG.md"
         }
-      ]
+      ],
+      "@semantic-release/github"
     ]
   },
   "dependencies": {}
