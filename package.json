@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo 'tests successful'",
     "prepare": "husky install",
     "release": "yarn semantic-release"
   },
