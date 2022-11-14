@@ -42,7 +42,7 @@
   },
   "release": {
     "debug": true,
-    "branches": [ "master" ],
+    "branches": [ "*" ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
