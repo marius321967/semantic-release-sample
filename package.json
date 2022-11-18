@@ -17,26 +17,6 @@
   "bugs": {
     "url": "https://github.com/marius321967/semantic-release-sample/issues"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "subject-case": [
-        2,
-        "never",
-        [
-          "start-case",
-          "pascal-case"
-        ]
-      ],
-      "body-max-line-length": [
-        0,
-        "always",
-        100
-      ]
-    }
-  },
   "homepage": "https://github.com/marius321967/semantic-release-sample#readme",
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
