@@ -47,41 +47,5 @@
     "husky": "^8.0.2",
     "semantic-release": "^19.0.5"
   },
-  "release": {
-    "debug": true,
-    "branches": [
-      "master",
-      {
-        "name": "beta",
-        "prerelease": true
-      }
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json"
-          ]
-        }
-      ],
-      "@semantic-release/github"
-    ]
-  },
   "dependencies": {}
 }
