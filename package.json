@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-sample",
-  "version": "1.1.0-beta.3",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
