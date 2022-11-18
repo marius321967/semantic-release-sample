@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-sample",
-  "version": "0.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,11 @@
           "pascal-case"
         ]
       ],
-      "body-max-line-length": [0, "always", 100]
+      "body-max-line-length": [
+        0,
+        "always",
+        100
+      ]
     }
   },
   "homepage": "https://github.com/marius321967/semantic-release-sample#readme",
