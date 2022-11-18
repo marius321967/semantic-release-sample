@@ -46,7 +46,7 @@
     "branches": [
       "master",
       {
-        "name": "feat/.+",
+        "name": "beta",
         "prerelease": true
       }
     ],
