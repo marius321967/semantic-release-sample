@@ -1,3 +1,10 @@
+# [1.1.0-beta.2](https://github.com/marius321967/semantic-release-sample/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2022-11-18)
+
+
+### Bug Fixes
+
+* remove last line ([f02f4c4](https://github.com/marius321967/semantic-release-sample/commit/f02f4c4468ba0a7816522dc49a087a955591e412))
+
 # [1.1.0](https://github.com/marius321967/semantic-release-sample/compare/v1.0.2...v1.1.0) (2022-11-18)
 
 
