@@ -38,6 +38,7 @@
     "@commitlint/config-conventional": "^17.2.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
     "husky": "^8.0.2",
     "semantic-release": "^19.0.5"
   },
@@ -60,10 +61,17 @@
         }
       ],
       [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
         "@semantic-release/git",
         {
           "assets": [
-            "CHANGELOG.md"
+            "CHANGELOG.md",
+            "package.json"
           ]
         }
       ],
