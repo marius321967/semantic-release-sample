@@ -1,3 +1,10 @@
+# [1.1.0-beta.3](https://github.com/marius321967/semantic-release-sample/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2022-11-18)
+
+
+### Features
+
+* yet another feature ([2ea003d](https://github.com/marius321967/semantic-release-sample/commit/2ea003decaf1468f25bbab1edb27dd192e8f1479))
+
 # [1.1.0-beta.2](https://github.com/marius321967/semantic-release-sample/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2022-11-18)
 
 
