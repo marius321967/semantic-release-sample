@@ -29,7 +29,8 @@
           "start-case",
           "pascal-case"
         ]
-      ]
+      ],
+      "body-max-line-length": [0, "always", 100]
     }
   },
   "homepage": "https://github.com/marius321967/semantic-release-sample#readme",
