@@ -4,11 +4,11 @@ on:
   push:
     branches: 
       - master
-      - feat/*
+      - beta
   pull_request:
     branches: 
       - master
-      - feat/*
+      - beta
 
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
