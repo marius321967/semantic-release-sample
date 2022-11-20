@@ -33,3 +33,6 @@ jobs:
           node-version: 18
       - run: yarn install
       - run: yarn release
+        env:
+          DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_REGISTRY_USER }}
+          DOCKER_REGISTRY_PASSWORD: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}

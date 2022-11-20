@@ -31,6 +31,19 @@
         ]
       }
     ],
-    "@semantic-release/github"
+    "@semantic-release/github",
+    [
+      "@codedependant/semantic-release-docker",
+      {
+        "dockerTags": [
+          "latest", 
+          "{{version}}",
+          "{{major}}",
+          "{{major}}.{{minor}}"
+        ],
+        "dockerImage": "semantic-release-sample",
+        "dockerProject": "marius321967"
+      }
+    ]
   ]
 }
