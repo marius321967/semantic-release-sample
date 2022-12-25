@@ -28,12 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      -
-        name: docker build
-        run: docker build -t $GITHUB_SHA .
+      # -
+      #   name: docker build
+      #   run: docker build -t $GITHUB_SHA .
+      # - 
+      #   name: docker run
+      #   run: docker run --rm $GITHUB_SHA
       - 
-        name: docker run
-        run: docker run --rm $GITHUB_SHA
+        name: "Docker Image smoke test"
+        run: docker-compose -f docker-compose.ci.yml up --build --exit-code-from test test
   release:
     needs: 
       - test-app
