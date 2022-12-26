@@ -19,6 +19,7 @@ jobs:
           docker-compose \
             -f docker-compose.ci.yml \
             up \
+            --build \
             --exit-code-from test \
             test
 
