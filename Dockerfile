@@ -3,7 +3,7 @@ FROM node
 
 WORKDIR /app
 
-VOLUME /app/config
+VOLUME /app/cnfig
 
 COPY package.json /app/package.json
 COPY yarn.lock /app/yarn.lock
