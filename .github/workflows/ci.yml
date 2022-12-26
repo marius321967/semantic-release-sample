@@ -1,54 +1,31 @@
-name: CI
+name: Release
 
 on:
   push:
     branches: 
       - master
-      - beta
-  pull_request:
-    branches: 
-      - master
-      - beta
+      - tutorial
   workflow_dispatch:
 
-env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
-  test-app:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: yarn install
-      - run: yarn test
   test-docker-image:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      # -
-      #   name: docker build
-      #   run: docker build -t $GITHUB_SHA .
-      # - 
-      #   name: docker run
-      #   run: docker run --rm $GITHUB_SHA
-      - 
-        name: "Docker Image smoke test"
-        run: docker-compose -f docker-compose.ci.yml up --build --exit-code-from test test
+      - name: Setup config.json
+        run: cp config/config.sample.json config/config.json
+      - name: Docker Image smoke test
+        run: |
+          docker-compose \
+            -f docker-compose.ci.yml \
+            up \
+            --exit-code-from test \
+            test
+
   release:
-    needs: 
-      - test-app
+    needs:
       - test-docker-image
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: yarn install
-      - run: yarn release
-        env:
-          DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_REGISTRY_USER }}
-          DOCKER_REGISTRY_PASSWORD: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
+      # release step...

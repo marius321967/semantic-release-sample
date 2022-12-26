@@ -1,10 +1,15 @@
-require('./feat2');
-require('./feat1.js');
+// index.js
+const config = require('./config/config.json');
 
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
+if (process.env.CI_MODE === 'true') {
+  console.log('Running in CI mode. App works. Exiting.');
+  process.exit(0);
+}
 
-console.log('Are you ready for the new feature?');
+let cycleNo = 0;
+console.log('Cycle #' + cycleNo++);
 
-console.log('This line appears since v1.2');
+setInterval(
+  () => console.log('Cycle #' + cycleNo++),
+  config.interval
+);
