@@ -1,5 +1,7 @@
 // index.js
-const config = require('./config/config.json');
+
+if (process.env.FAIL == 'true')
+  throw new Error('Something failed');
 
 if (process.env.CI_MODE === 'true') {
   console.log('Running in CI mode. App works. Exiting.');
@@ -11,5 +13,5 @@ console.log('Cycle #' + cycleNo++);
 
 setInterval(
   () => console.log('Cycle #' + cycleNo++),
-  config.interval
+  10_000
 );
